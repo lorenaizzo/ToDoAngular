@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-10 offset-1">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tarea</th>
+                        <th>Vencimiento</th>
+                        <th>Asignado a</th>
+                        <th>Realizada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tarea of tareas">
+                        <td>{{ tarea.tarea }}</td>
+                        <td>{{ tarea.vencimiento.day }}/{{ tarea.vencimiento.month }}/{{ tarea.vencimiento.year }}</td>
+                        <td>{{ tarea.persona.nombre }} {{ tarea.persona.apellido }}</td>
+                        <td>
+                            <input class="form-check-input" type="checkbox" (click)="realizada(tarea)" [(ngModel)]="tarea.realizada">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

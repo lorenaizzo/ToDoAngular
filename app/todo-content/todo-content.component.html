@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col">
+        <app-add-todo (onAgregoTarea)="onAgregoTarea()"></app-add-todo>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-12">
+        <app-list-content [personas]="personas" [tareas]="tareas" (onCambio)="onCambio()"></app-list-content>
+    </div>
+</div> 

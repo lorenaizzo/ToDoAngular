@@ -1,0 +1,16 @@
+.principal {
+    background-color: whitesmoke;
+}
+
+.form-check-input {
+    margin-top: 42px;
+    transform: scale(1.8);
+}
+
+.form-check-label {
+    margin-top: 37px;
+}
+
+.btn {
+    margin-top: 37px;
+}

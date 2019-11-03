@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-12">
+        <br/>
+        <div class="col-3 offset-1">
+            <h2>Listado de tareas</h2>
+        </div>
+        <br/>
+        <app-filter (onFiltrar)="onFiltrar($event)"></app-filter>
+        <app-item-list [tareas]="tareasFiltradas" (onCambio)="cambiar()"></app-item-list>
+    </div>
+</div>

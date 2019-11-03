@@ -1,0 +1,30 @@
+<div class='row'>
+    <div class="col-10 offset-1 fondo">
+        <br/>
+        <h2>Agregar una Tarea</h2>
+        <br/>
+        <p *ngIf="error">{{ error }}</p>
+        <form>
+            <div class="form-group fondo">
+                <label for="tarea">Tarea</label>
+                <input type="text" class="form-control" id="tarea" name="tarea" [(ngModel)]="unTodo.tarea" required> 
+            </div>
+            <label for="vencimiento">Vencimiento  </label>
+            <div class="input-group fondo">
+                    <input type="text" class="form-control" id="vencimiento" name="vencimiento" [(ngModel)]="unTodo.vencimiento" required ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                        <button (click)="d.toggle()" class="btn btn-outline-secondary">Fecha</button>
+                    </div>
+            </div>
+            <div class="form-group fondo">
+                    <label for="asignadaA">Asignada a  </label>
+                    <select class="form-control" [(ngModel)]="unTodo.asignadoId" name="asignadoA" required>
+                        <option *ngFor="let persona of personas" value="{{ persona.id }}">{{ persona.nombre }} {{ persona.apellido }}</option> 
+                    </select>
+                </div>
+            <button  type="button" class="btn btn-success" (click)="guardar()">Guardar</button>
+        </form>
+        <br/>
+    </div>
+</div>
+
